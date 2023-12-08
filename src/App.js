@@ -2,12 +2,13 @@ import SignIn from "./SignIn";
 import SignOut from "./SignOut";
 import PalletDashboard from "./PalletDashboard";
 
-import React, { useState } from "react";
+import React, { useState} from "react";
 
 function App() {
   // create an authenticated user object
   // initially this is null (user not authenticated)
-  const [theAuthUser, setTheAuthUser] = useState(null);
+  const [theAuthUser, setTheAuthUser] = useState("");
+
   return (
     <div className="container">
       <h1>The CS385 Shipping Company</h1>

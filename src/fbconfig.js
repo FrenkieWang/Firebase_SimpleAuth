@@ -5,13 +5,14 @@ import { getFirestore, initializeFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
  // you will need to generate this within Firebase yourself. 
-  apiKey: "AIzaSyCyYr79N1VIGu7mn7uEkFcd4b1_9xSxYG8",
-  authDomain: "fir-totorialfrenkie.firebaseapp.com",
-  projectId: "fir-totorialfrenkie",
-  storageBucket: "fir-totorialfrenkie.appspot.com",
-  messagingSenderId: "363661984616",
-  appId: "1:363661984616:web:fd948fe7de27ebb6b50cdd",
-  measurementId: "G-4Q42D6D41R"
+ // FirebaseTutorialRegister
+ apiKey: "AIzaSyCMASpR_TkFTuEson_rj37ok13Sl24fjmQ",
+ authDomain: "fir-tutorialregistration.firebaseapp.com",
+ projectId: "fir-tutorialregistration",
+ storageBucket: "fir-tutorialregistration.appspot.com",
+ messagingSenderId: "988069318630",
+ appId: "1:988069318630:web:a61b704c21585b82f9d027",
+ measurementId: "G-T3MJYMEEDM"
 };
 
 

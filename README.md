@@ -14,14 +14,10 @@ In this part, we need to allow a user to
 ## Play it by yourself first!
 I have deployed the project on the website, click the following link to have a try.
 
-https://easy-firebase.vercel.app/
+https://firebase-simple-auth.vercel.app/
 
-I created two sample users in this file.
-Each users can deal with their own pallets.
-
-frenkie@gmail.com 12345678
-
-frenkie2@gmail.com 12345678
+You can register your account in the Home Page.
+You can login with your registered account as well.
 
 Have fun!
 

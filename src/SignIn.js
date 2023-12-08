@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import {firebaseApp} from "./fbconfig";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword
+} from "firebase/auth";
 
-const SignIn = ({ setTheAuthUser }) => {
+import SignUp from "./SignUp";
+
+function SignIn (props) {
   // we access authentication object from our
   // firebase database configuration.
   const auth = getAuth(firebaseApp);
@@ -28,7 +34,8 @@ const SignIn = ({ setTheAuthUser }) => {
   // When the submit button is pressed we pass the values of the
   // state variables inputFielde, inputFieldp to our
   // firebase function signInWithEmailAndPassword
-  const submitButton = () => {
+  const handleSignIn = () => {
+    
     signInWithEmailAndPassword(auth, inputFielde, inputFieldp)
       .then((userCredentials) => {
         // Obtain the authenticated user object
@@ -37,10 +44,36 @@ const SignIn = ({ setTheAuthUser }) => {
         console.log(user);
         // setTheAuthUser from the Parent App.
         // now the parent will know the user is authenticated
-        setTheAuthUser(user);
+        props.setTheAuthUser(user);       
       })
       .catch((error) => {
-        setError("Unable to logon");
+        console.log(error.code);
+        console.log(error.message);    
+        setError("Email not exist or wrong passwords!");
+      });
+  };
+
+  const handleSignUp = () => {
+    createUserWithEmailAndPassword(auth, inputFielde, inputFieldp)
+      .then((userCredentials) => {
+        // Obtain the authenticated user object
+        // from firebase.
+        const user = userCredentials.user;
+        console.log(user);
+        // setTheAuthUser from the Parent App.
+        // now the parent will know the user is authenticated
+        props.setTheAuthUser(user);
+        props.toggleCreation();
+      })
+      .catch((error) => {
+        console.log(error.code);
+        console.log(error.message);
+        if(error.code == "auth/weak-password"){
+          setError("Password should be at least 6 characters!");
+        }
+        else{
+          setError("That email has been registered before!");
+        }
       });
   };
 
@@ -68,9 +101,11 @@ const SignIn = ({ setTheAuthUser }) => {
       />
       <br />
       <br />
-      <button onClick={submitButton}>Submit</button>
+      <button onClick={handleSignIn}>Log In</button>
       <hr />
       <p>{error}</p>
+      {error  && <SignUp handleSignUp={handleSignUp}/>}
+      
     </div>
   );
 };
