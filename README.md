@@ -1,5 +1,5 @@
 ## Introduction
-This is a very easy project that realised the full-stack function of C-R-U-D, by using Firebase and React. There are only 9 JavaScript files and 1 PNG file in this project. 
+This is a very easy project that realised the full-stack function of C-R-U-D, by using Firebase and React. There are only **9 JavaScript files** and **1 PNG file** in this project. 
 
 The reason why we chose Firebase to connect with React is because we don’t 
 need to set up Backend program.  
