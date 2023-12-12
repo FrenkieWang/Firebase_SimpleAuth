@@ -38,25 +38,30 @@ There are 9 files and 1 picture in this project:
 All of them are in the 'src' folder.
 
 ## Prepare
-Despite the JS code, there are 3 files that you need to read first.
 
-Type “npm install firebase" in the VS Code terminal first, then type "npm run". 
+Use **git clone** to download the project, then do the following steps: 
 
-### How to run this project.pdf
+1) Change directory to the folder with **package.json**.
 
-This document tells you how to register the firebase account on Google, 
+2) Type **npm install** in the VS Code terminal, this will install all the dependencies that are used in this project.
+
+3) Type **npm start** to run the project, the project will run in **http://localhost:3000/**.
+
+Despite the JS code, there is a **Handbook(Firebase + React Full Stack Project)** that you need to read first.
+
+In this Handbook, there are three parts that claifiy the project in detail.
+
+### PART 1 - How to run this project?
+
+This part tells you how to register the firebase account on Google, 
 how to configure your firebase, how to install the dependency and
 how to run this project.
 
-### Overall Components Schematic.jpg
-
-I draw a picture to explain the architecture of this code.
-
-### Project Architecture.pdf
+### PART 2 – Project Architecture
  
-This document tells you the architecture of this program.
+This part tells you the architecture of this project.
 
-This program is divided into 3 parts.
+This project is divided into 3 parts.
 
 - Part A: Pallet Dashboard
 - Part B: Authentication
@@ -64,12 +69,14 @@ This program is divided into 3 parts.
 
 You can understand how this project works after reading this file.
 
-### Firebase function.pdf
+In **7 Overall Schematic**, I also draw a picture to explain the architecture of this code.
+
+### PART 3 – Firebase Function
  
-This document explains all the function that are used in this firebase App:
+This part explains all the function that are used in this firebase App:
 
 - Firebase Configuration: initializeApp, getApp, initializeFirestore(), getAuth()...
-- Firebase Authentication: signInWithEmailAndPassword(),signOut()...
+- Firebase Authentication: signInWithEmailAndPassword(),createUserWithEmailAndPassword(), signOut()...
 - Data CRUD: addDoc, updateDoc, deleteDoc, query, onSnapShot...
 
 
