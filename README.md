@@ -39,9 +39,9 @@ All of them are in the 'src' folder.
 
 ## Prepare
 
-Use **git clone** to download the project, then do the following steps: 
+Use **git clone [SSH Link]** to download the project, then do the following steps: 
 
-1) Change directory to the folder with **package.json**.
+1) Change directory to **the folder with package.json**.
 
 2) Type **npm install** in the VS Code terminal, this will install all the dependencies that are used in this project.
 
